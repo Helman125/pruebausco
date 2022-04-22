@@ -1,0 +1,37 @@
+<div class="container">
+    <form action="">
+        
+<label for="medicos">Medicos</label>
+<select class="form-select" id="medico" name="medico" form="medico" (change)="agregarMedico($event.target)">
+  
+  <option selected="true" disabled="disabled" >Elije un medico</option>    
+  <option *ngFor="let medico of lista" value={{medico.id}}  >{{medico.nombre}} </option>
+</select> 
+
+  <label for="medicos">Paciente</label>
+  <select class="form-select" id="medico" name="medico" form="medico" (change)="agregarPaciente($event.target)">
+
+  <option selected="true" disabled="disabled" >Elije un paciente</option>    
+  <option *ngFor="let paciente of lista2" value={{paciente.id}}>{{paciente.nombre}}</option> 
+
+</select>
+      
+        <label class="form-label"  for="consultorio">Consultorio</label>
+        <input class="form-control form-control-lg" type="text"id="consultorio" name="consultorio" [(ngModel)]="citaNueva.id_consultorio">
+
+        <label  class="form-label" for="fecha">Fecha</label>
+        <input class="form-control form-control-lg" type="date"id="fecha" name="fecha" [(ngModel)]="citaNueva.fecha">
+        
+        <label  class="form-label" for="hora">Hora</label>
+        <input class="form-control form-control-lg" type="time"id="hora" name="hora" [(ngModel)]="citaNueva.hora">
+        <br>
+        <button class="btn btn-primary" (click)="agregarCita()">Guardar</button>
+
+
+
+      
+
+
+
+    </form>
+</div>

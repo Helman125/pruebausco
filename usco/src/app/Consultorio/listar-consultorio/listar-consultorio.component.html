@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header d-flex bd-highlight mb-3">
+            <h3>Consultorios</h3>
+            <button class="btn btn-primary ms-auto p-2 bd-highligh" routerLink="/consultorioAdd">Agregar</button>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr class="text-center">
+                    <th scope="col">Id</th>
+                    <th scope="col">Departamento</th>
+                    <th scope="col">Municipio</th>
+                    <th scope="col">Dirección</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center" *ngFor="let consultorio of lista">
+                        <td>{{consultorio.id}}</td>
+                        <td>{{consultorio.departamento}}</td>
+                        <td>{{consultorio.municipio}}</td>
+                        <td>{{consultorio.direccion}}</td>
+                       
+                    <td> <button class="btn btn-primary" routerLink="/consultorioEditar">Editar</button></td>
+                </tr>
+                </tbody>
+                </table>
+        </div>
+    </div>
+</div>

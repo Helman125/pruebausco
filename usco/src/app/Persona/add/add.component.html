@@ -1,0 +1,22 @@
+<div class="container">
+    <form action="">
+        <label for="id"  class="form-label ">Id</label>
+        <input class="form-control form-control-lg " type="number"id="id" name="id" [(ngModel)]="pacienteNuevo.id">
+
+        <label  class="form-label" for="nombre">Nombre</label>
+        <input class="form-control form-control-lg" type="text"id="nombre" name="nombre" [(ngModel)]="pacienteNuevo.nombre">
+
+        <label  class="form-label"  for="apellido">Apellido</label>
+        <input class="form-control form-control-lg" type="text"id="apellido" name="apellido" [(ngModel)]="pacienteNuevo.apellido">
+
+        <label class="form-label"  for="direccion">Direccion</label>
+        <input class="form-control form-control-lg" type="text"id="direccion" name="direccion" [(ngModel)]="pacienteNuevo.direccion">
+
+        <label  class="form-label" for="telefono">Telefono</label>
+        <input class="form-control form-control-lg" type="number"id="telefono" name="telefono" [(ngModel)]="pacienteNuevo.telefono">
+        <br>
+        <button class="btn btn-primary" (click)="agregarPaciente()">Guardar</button>
+
+
+
+    </form>

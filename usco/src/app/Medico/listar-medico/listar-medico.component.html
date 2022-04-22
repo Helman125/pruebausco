@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header d-flex bd-highlight mb-3">
+            <h3>Medicos</h3>
+            <button class="btn btn-primary ms-auto p-2 bd-highligh" routerLink="/medicoAdd">Agregar</button>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr class="text-center">
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Telefono</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center"*ngFor="let medico of lista">
+                    <td>{{medico.id}}</td>
+                    <td>{{medico.nombre}}</td>
+                    <td>{{medico.apellido}}</td>
+                    <td>{{medico.direccion}}</td>
+                    <td>{{medico.telefono}}</td>
+                    <td> <button class="btn btn-primary" routerLink="['/medicoEditar,medico.id]">Editar</button></td>
+                </tr>
+                </tbody>
+                </table>
+        </div> 
+</div>
+
+

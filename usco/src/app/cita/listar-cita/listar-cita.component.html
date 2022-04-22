@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header d-flex bd-highlight mb-3">
+            <h3>Citas</h3>
+            <button class="btn btn-primary ms-auto p-2 bd-highligh" routerLink="/citaAdd">Agregar</button>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr class="text-center">
+                    <th scope="col">Id</th>
+                    <th scope="col">Paciente</th>
+                    <th scope="col">Medico</th>
+                    <th scope="col">Consultorio</th>
+                    <th scope="col">Fecha</th>
+                    
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center" *ngFor="let cita of lista">
+                        <td>{{cita.id}}</td>
+                        <td>{{cita.id_medico}}</td>
+                        <td>{{cita.id_paciente}}</td>
+                        <td>{{cita.id_consultorio}}</td>
+                        <td>{{cita.fecha}}</td>
+                        <td>{{cita.hora}}</td>
+                        
+                    <td> <button class="btn btn-primary" [routerLink]="['/citaEditar', cita.id]" routerLinkActive="router-link-active" >Editar</button></td>
+                </tr>
+                </tbody>
+                
+                </table>
+        </div>
+    </div>
+</div>
